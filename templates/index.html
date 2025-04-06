@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Condition Prediction</title>
+</head>
+<body>
+    <h1>Weather Condition Prediction</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file">Upload Excel Dataset:</label>
+        <input type="file" name="file" id="file" required>
+        <br>
+        <input type="submit" value="Upload and Train Model">
+    </form>
+    <hr>
+    <h2>Predict Weather Condition</h2>
+    <form action="/predict" method="POST">
+        <label for="temperature">Temperature (°C):</label>
+        <input type="text" name="temperature" id="temperature" required>
+        <br>
+        <label for="wind_kph">Wind Speed (kph):</label>
+        <input type="text" name="wind_kph" id="wind_kph" required>
+        <br>
+        <label for="humidity">Humidity (%):</label>
+        <input type="text" name="humidity" id="humidity" required>
+        <br>
+        <label for="pressure_mb">Pressure (mb):</label>
+        <input type="text" name="pressure_mb" id="pressure_mb" required>
+        <br>
+        <label for="uv_index">UV Index:</label>
+        <input type="text" name="uv_index" id="uv_index" required>
+        <br>
+        <label for="visibility_km">Visibility (km):</label>
+        <input type="text" name="visibility_km" id="visibility_km" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
